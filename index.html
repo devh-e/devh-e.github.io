@@ -122,6 +122,17 @@
                 <i>https://the1ibrary.com</i>
               </a>
             </li>
+            <li class="url" style="padding-left: 2px;">
+              <img src="./gmail.png" width="18px" height="auto" alt="twitter" />
+              <a
+                class="App-link"
+                href="mailto:devhee01@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i>devhee01@gmail.com</i>
+              </a>
+            </li>
           </ul>
         </article>
       </div>
@@ -139,9 +150,8 @@
         y: innerHeight / 2,
       };
 
-      const colors = ["#2185C5", "#7ECEFD", "#FFF6E5", "#FF7F66"];
+      const colors = ["#3F6F8C", "#A7CBD9", "#659AA6", "#142601", "#D9A679"];
 
-      // Event Listeners
       addEventListener("mousemove", (event) => {
         mouse.x = event.clientX;
         mouse.y = event.clientY;
@@ -157,7 +167,6 @@
       const gravity = 1;
       const friction = 0.89;
 
-      // Objects
       class Ball {
         constructor(x, y, vy, vx, radius, color) {
           this.x = x;
@@ -196,11 +205,10 @@
         }
       }
 
-      // Implementation
       let ball;
       const ballArray = [];
       function init() {
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 150; i++) {
           const radius = randomIntFromRange(8, 30);
           const x = randomIntFromRange(radius, canvas.width - radius);
           const y = randomIntFromRange(0, canvas.height - radius);
@@ -211,7 +219,6 @@
         }
       }
 
-      // Animation Loop
       function animate() {
         requestAnimationFrame(animate);
         c.clearRect(0, 0, canvas.width, canvas.height);
@@ -223,7 +230,6 @@
       init();
       animate();
 
-      // util
       function randomIntFromRange(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
       }
