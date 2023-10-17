@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <link rel="icon" href="./favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="He is @Hee" />
-        <link rel="apple-touch-icon" href="./logo192.png" />
-        <!--
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="He is @Hee" />
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-        <link rel="manifest" href="./manifest.json" />
-        <!--
+    <link rel="manifest" href="./manifest.json" />
+    <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -21,280 +21,243 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-        <title>#Hee</title>
-        <style>
-            body {
-                margin: 0;
-                background-color: #00001e;
-            }
-            .container {
-                height: 100vh;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                z-index: 100;
-            }
-            canvas {
-                position: absolute;
-                left: 0;
-                top: 0;
-                z-index: -1;
-            }
+    <title>#Hee</title>
+    <style>
+      body {
+        margin: 0;
+        background-color: #00001e;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+      canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+      }
 
-            .header {
-                display: flex;
-                flex-direction: column;
-                padding: 20px;
-                color: #fff;
-            }
-            .article {
-                display: flex;
-                flex-direction: column;
-                margin: 0;
-                padding: 0 20px;
-            }
-            .urls {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-            }
-            .url {
-                color: #fff;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                gap: 10px;
-            }
-            i {
-                color: #ffe400;
-            }
-            b {
-                color: #ffe400;
-            }
-            a {
-                text-decoration: none;
-            }
-        </style>
-    </head>
-    <body>
-        <canvas> </canvas>
-        <div class="container">
-            <div>
-                <header class="header">
-                    <h1>#<b>hee</b></h1>
-                    <p class="desc">
-                        If you want to learn more about web development
-                        <br />
-                        or find useful information, check out these URLs.
-                    </p>
-                </header>
-                <article class="article">
-                    <ul class="urls">
-                        <li class="url" style="padding-left: 2px">
-                            <img
-                                src="./insta.png"
-                                width="18px"
-                                height="auto"
-                                alt="insta"
-                            />
-                            <a
-                                class="App-link"
-                                href="https://www.instagram.com/dev.hee.kr/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i>@dev.hee.kr</i>
-                            </a>
-                        </li>
-                        <li class="url" style="padding-left: 2px">
-                            <img
-                                src="./blogger.png"
-                                width="18px"
-                                height="auto"
-                                alt="twitter"
-                            />
-                            <a
-                                class="App-link"
-                                href="https://the1ibrary.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i>https://the1ibrary.com</i>
-                            </a>
-                        </li>
-                        <li class="url" style="padding-left: 2px">
-                            <img
-                                src="./gmail.png"
-                                width="18px"
-                                height="auto"
-                                alt="twitter"
-                            />
-                            <a
-                                class="App-link"
-                                href="mailto:devhee01@gmail.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i>devhee01@gmail.com</i>
-                            </a>
-                        </li>
-                        <li class="url" style="padding-left: 2px">
-                            <img
-                                src="./gmail.png"
-                                width="18px"
-                                height="auto"
-                                alt="twitter"
-                            />
-                            <a
-                                class="App-link"
-                                href="mailto:devhee01@gmail.com"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i>devhee01@gmail.com</i>
-                            </a>
-                        </li>
-                        <li class="url" style="padding-left: 2px">
-                            <img
-                                src="./github.png"
-                                width="18px"
-                                height="auto"
-                                alt="insta"
-                            />
-                            <a
-                                class="App-link"
-                                href="https://github.com/devh-e/socket-programming-using-react/blob/master/README.md"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <i>리엑트로 배우는 소켓프로그래밍 오탈자</i>
-                            </a>
-                        </li>
-                    </ul>
-                </article>
-            </div>
-        </div>
+      .header {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        color: #fff;
+      }
+      .article {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0 20px;
+      }
+      .urls {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+      }
+      .url {
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+      }
+      i {
+        color: #ffe400;
+      }
+      b {
+        color: #ffe400;
+      }
+      a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas> </canvas>
+    <div class="container">
+      <div>
+        <header class="header">
+          <h1>#<b>hee</b></h1>
+          <p class="desc">
+            If you want to learn more about web development
+            <br />
+            or find useful information, check out these URLs.
+          </p>
+        </header>
+        <article class="article">
+          <ul class="urls">
+            <li class="url" style="padding-left: 2px;">
+              <img src="./insta.png" width="18px" height="auto" alt="insta" />
+              <a
+                class="App-link"
+                href="https://www.instagram.com/dev.hee.kr/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i>@dev.hee.kr</i>
+              </a>
+            </li>
+            <li class="url" style="padding-left: 2px;">
+              <img
+                src="./blogger.png"
+                width="18px"
+                height="auto"
+                alt="twitter"
+              />
+              <a
+                class="App-link"
+                href="https://the1ibrary.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i>https://the1ibrary.com</i>
+              </a>
+            </li>
+            <li class="url" style="padding-left: 2px;">
+              <img src="./gmail.png" width="18px" height="auto" alt="twitter" />
+              <a
+                class="App-link"
+                href="mailto:devhee01@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i>devhee01@gmail.com</i>
+              </a>
+            </li>
+            <li class="url" style="padding-left: 2px;">
+              <img src="./github.png" width="18px" height="auto" alt="insta" />
+              <a
+                class="App-link"
+                href="https://github.com/devh-e/socket-programming-using-react/blob/master/README.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i>리엑트로 배우는 소켓프로그래밍 오탈자</i>
+              </a>
+            </li>
+          </ul>
+        </article>
+      </div>
+    </div>
 
-        <script>
-            const canvas = document.querySelector("canvas");
-            const c = canvas.getContext("2d");
+    <script>
+      const canvas = document.querySelector("canvas");
+      const c = canvas.getContext("2d");
 
-            canvas.width = innerWidth;
-            canvas.height = innerHeight;
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
 
-            const mouse = {
-                x: innerWidth / 2,
-                y: innerHeight / 2,
-            };
+      const mouse = {
+        x: innerWidth / 2,
+        y: innerHeight / 2,
+      };
 
-            const colors = [
-                "#7229D9",
-                "#668CD9",
-                "#F2B035",
-                "#F2600C",
-                "#D90707",
-            ];
+      const colors = ["#7229D9", "#668CD9", "#F2B035", "#F2600C", "#D90707"];
 
-            addEventListener("mousemove", (event) => {
-                mouse.x = event.clientX;
-                mouse.y = event.clientY;
-            });
+      addEventListener("mousemove", (event) => {
+        mouse.x = event.clientX;
+        mouse.y = event.clientY;
+      });
 
-            addEventListener("resize", () => {
-                canvas.width = innerWidth;
-                canvas.height = innerHeight;
+      addEventListener("resize", () => {
+        canvas.width = innerWidth;
+        canvas.height = innerHeight;
 
-                init();
-            });
+        init();
+      });
 
-            const gravity = 1;
-            const friction = 0.89;
+      const gravity = 1;
+      const friction = 0.89;
 
-            class Ball {
-                constructor(x, y, vy, vx, radius, color) {
-                    this.x = x;
-                    this.y = y;
-                    this.vy = vy;
-                    this.vx = vx;
-                    this.radius = radius;
-                    this.color = color;
-                }
+      class Ball {
+        constructor(x, y, vy, vx, radius, color) {
+          this.x = x;
+          this.y = y;
+          this.vy = vy;
+          this.vx = vx;
+          this.radius = radius;
+          this.color = color;
+        }
 
-                draw() {
-                    c.beginPath();
-                    c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-                    c.fillStyle = this.color;
-                    c.fill();
-                    c.stroke();
-                    c.closePath();
-                }
+        draw() {
+          c.beginPath();
+          c.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+          c.fillStyle = this.color;
+          c.fill();
+          c.stroke();
+          c.closePath();
+        }
 
-                update() {
-                    if (this.y + this.radius + this.vy > canvas.height) {
-                        this.vy = -this.vy * friction;
-                    } else {
-                        this.vy += gravity;
-                    }
+        update() {
+          if (this.y + this.radius + this.vy > canvas.height) {
+            this.vy = -this.vy * friction;
+          } else {
+            this.vy += gravity;
+          }
 
-                    if (
-                        this.x + this.radius + this.vx > canvas.width ||
-                        this.x - this.radius <= 0
-                    ) {
-                        this.vx = -this.vx;
-                    }
-                    this.x += this.vx;
-                    this.y += this.vy;
-                    this.draw();
-                }
-            }
+          if (
+            this.x + this.radius + this.vx > canvas.width ||
+            this.x - this.radius <= 0
+          ) {
+            this.vx = -this.vx;
+          }
+          this.x += this.vx;
+          this.y += this.vy;
+          this.draw();
+        }
+      }
 
-            let ball;
-            const ballArray = [];
-            function init() {
-                for (let i = 0; i < 150; i++) {
-                    const radius = randomIntFromRange(8, 30);
-                    const x = randomIntFromRange(radius, canvas.width - radius);
-                    const y = randomIntFromRange(0, canvas.height - radius);
-                    const vx = randomIntFromRange(-2, 2);
-                    const vy = randomIntFromRange(-2, 2);
-                    const color = randomColor(colors);
-                    ballArray.push(new Ball(x, y, vy, vx, radius, color));
-                }
-            }
+      let ball;
+      const ballArray = [];
+      function init() {
+        for (let i = 0; i < 100; i++) {
+          const radius = randomIntFromRange(8, 30);
+          const x = randomIntFromRange(radius, canvas.width - radius);
+          const y = randomIntFromRange(0, canvas.height - radius);
+          const vx = randomIntFromRange(-2, 2);
+          const vy = randomIntFromRange(-2, 2);
+          const color = randomColor(colors);
+          ballArray.push(new Ball(x, y, vy, vx, radius, color));
+        }
+      }
 
-            function animate() {
-                requestAnimationFrame(animate);
-                c.clearRect(0, 0, canvas.width, canvas.height);
-                ballArray.forEach((v) => {
-                    v.update();
-                });
-            }
+      function animate() {
+        requestAnimationFrame(animate);
+        c.clearRect(0, 0, canvas.width, canvas.height);
+        ballArray.forEach((v) => {
+          v.update();
+        });
+      }
 
-            init();
-            animate();
+      init();
+      animate();
 
-            function randomIntFromRange(min, max) {
-                return Math.floor(Math.random() * (max - min + 1) + min);
-            }
+      function randomIntFromRange(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+      }
 
-            function randomColor(colors) {
-                return colors[Math.floor(Math.random() * colors.length)];
-            }
+      function randomColor(colors) {
+        return colors[Math.floor(Math.random() * colors.length)];
+      }
 
-            function distance(x1, y1, x2, y2) {
-                const xDist = x2 - x1;
-                const yDist = y2 - y1;
+      function distance(x1, y1, x2, y2) {
+        const xDist = x2 - x1;
+        const yDist = y2 - y1;
 
-                return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
-            }
-        </script>
-    </body>
+        return Math.sqrt(Math.pow(xDist, 2) + Math.pow(yDist, 2));
+      }
+    </script>
+  </body>
 </html>
